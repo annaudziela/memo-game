@@ -1,9 +1,20 @@
 import '../scss/main.scss';
 
-// uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
+console.log('Did you try? 🙇‍♂️')
 
-/* place your code below */
+const gridElement = document.querySelector('.grid__list');
 
-console.log('HELLO 🚀')
+
+if (gridElement) {
+    gridElement.addEventListener('click', () => {
+        gridElement.innerHTML = 'Działa?';
+    })
+} 
+
+const aGridElement = document.querySelector('.grid__element--a');
+
+if (aGridElement) {
+    aGridElement.addEventListener('click', () => {
+        aGridElement.innerHTML = '⏰';
+    })
+}
