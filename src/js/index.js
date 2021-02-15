@@ -2,19 +2,16 @@ import '../scss/main.scss';
 
 console.log('Did you try? 🙇‍♂️')
 
-const gridElement = document.querySelector('.grid__list');
+const gridElement = document.querySelectorAll('.grid__element');
 
-
-if (gridElement) {
-    gridElement.addEventListener('click', () => {
-        gridElement.innerHTML = 'Działa?';
-    })
-} 
-
-const aGridElement = document.querySelector('.grid__element--a');
-
-if (aGridElement) {
-    aGridElement.addEventListener('click', () => {
-        aGridElement.innerHTML = '⏰';
+for (const elements of gridElement) {
+    elements.addEventListener('click', () => {
+        elements.innerHTML = 'tile changed';
     })
 }
+
+
+
+
+
+

@@ -4,10 +4,19 @@
 @import "modules/hello.scss";
 
 body {
-  background: $wtf;
+  background: rgba(49, 49, 90, 0.287);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  line-height: 30px;
 }
+
+.grid__element {
+  color: tan;
+  background: cadetblue;
+  margin: 2px;
+}
+
+
