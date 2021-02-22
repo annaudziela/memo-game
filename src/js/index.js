@@ -2,14 +2,16 @@ import '../scss/main.scss';
 
 console.log('Did you try? 🙇‍♂️')
 
-const classCheck = document.querySelectorAll('.grid__element');
-for (const elementsClass of classCheck) {
-console.log(elementsClass.classList);
-
+function clickedClass(e) {
+    var targetClass = e.target.className;
+    console.log(targetClass);
 }
 
+const classCheck = document.querySelectorAll('.grid__element');
 
-
+for (const elementsClass of classCheck) {
+    elementsClass.addEventListener('click', clickedClass);
+}
 
 
 
