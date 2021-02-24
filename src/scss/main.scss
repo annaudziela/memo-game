@@ -13,10 +13,25 @@ body {
   line-height: 30px;
 }
 
-.grid__element {
+.grid {
+&__element {
   color: tan;
   background: cadetblue;
   margin: 2px;
+}
+
+&__list {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+gap: 0px 0px;
+grid-template-areas:
+  ". . . ."
+  ". . . ."
+  ". . . ."
+  ". . . .";
+  list-style: none;
+}
 }
 
 

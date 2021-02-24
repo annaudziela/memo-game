@@ -2,17 +2,25 @@ import '../scss/main.scss';
 
 console.log('Did you try? 🙇‍♂️')
 
+
 function clickedClass(e) {
     var targetClass = e.target.className;
     console.log(targetClass);
+    return targetClass;
 }
 
 const classCheck = document.querySelectorAll('.grid__element');
 
 for (const elementsClass of classCheck) {
-    elementsClass.addEventListener('click', clickedClass);
+    elementsClass.addEventListener('click', clickedClass); 
 }
+ 
 
+
+const testDiv = document.querySelector('.test-div');
+testDiv.addEventListener('click', () => {
+    testDiv.innerHTML = targetClass;
+})
 
 
 
