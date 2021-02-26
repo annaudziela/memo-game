@@ -17,10 +17,10 @@ for (const elementsClass of classCheck) {
  
 
 
-const testDiv = document.querySelector('.test-div');
-testDiv.addEventListener('click', () => {
-    testDiv.innerHTML = targetClass;
-})
+// const testDiv = document.querySelector('.test-div');
+// testDiv.addEventListener('click', () => {
+//     testDiv.innerHTML = targetClass;
+// })
 
 
 
