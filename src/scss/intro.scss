@@ -1,0 +1,17 @@
+
+.intro {
+    margin-top: 40px;
+
+    &__header::after {
+        content: ' ~ ';
+        color: red;
+        font-size: 40px;
+    &__header 
+        &--special {
+            color: red;
+    }  
+    }
+} 
+.intro__header--special {
+    color: red;
+}

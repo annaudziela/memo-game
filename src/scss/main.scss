@@ -1,7 +1,9 @@
 @import "~normalize.css";
 
 @import "_variables";
+@import "intro";
 @import "modules/hello.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 
 // * {
 //   padding: 0;
@@ -10,8 +12,10 @@
 // }
 
 body {
-  background: rgba(49, 49, 90, 0.287);
-  color: #fff;
+  background: #f0efeb;
+  color: #1b282e;
+  font-family: 'Nunito', cursive;
+  font-style: cursive;
   // display: flex;
   max-width: 640px;
   max-height: 640px;
@@ -28,7 +32,7 @@ body {
   
 &__element {
   color: tan;
-  background: #fff;
+  // background: #fff;
   margin: 2px;
   display: flex;
   align-items: center;
@@ -37,8 +41,10 @@ body {
 &__back {
   box-sizing: border-box;
   max-width: 100px;
+  visibility: hidden;
 }
 &__front {
+  box-sizing: border-box;
   max-width: 100px;
 }
 &__list {
