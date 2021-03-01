@@ -1,17 +1,37 @@
 
 .intro {
-    margin-top: 40px;
-
-    &__header::after {
-        content: ' ~ ';
-        color: red;
-        font-size: 40px;
-    &__header 
+margin-top: 40px;
+text-align: center;
+    &__header {  
         &--special {
+        color: red;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 44px;
+            &::before {
+            content: ' ~ ';
             color: red;
+            }
     }  
     }
-} 
-.intro__header--special {
-    color: red;
-}
+    &::after {
+        color: red;
+        font-size: 50px;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    &__link {
+        text-decoration: none;
+        color: red;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 400;
+        font-size: 24px;
+        &:hover {
+            color: rgba(148, 0, 0, 0.666);
+        }
+    }
+    }

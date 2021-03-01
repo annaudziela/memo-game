@@ -2,18 +2,21 @@ import '../scss/main.scss';
 
 console.log('Did you try? 🙇‍♂️')
 
+let selectedPair = [];
 
 function clickedClass(e) {
-    var targetClass = e.target.className;
+    const targetClass = e.currentTarget.className;
+    selectedPair.push(targetClass);
     console.log(targetClass);
-    return targetClass;
 }
+console.log(selectedPair); 
 
 const classCheck = document.querySelectorAll('.grid__element');
 
 for (const elementsClass of classCheck) {
     elementsClass.addEventListener('click', clickedClass); 
 }
+
  
 
 

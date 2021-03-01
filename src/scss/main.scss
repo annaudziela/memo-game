@@ -3,7 +3,8 @@
 @import "_variables";
 @import "intro";
 @import "modules/hello.scss";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 // * {
 //   padding: 0;
@@ -15,7 +16,6 @@ body {
   background: #f0efeb;
   color: #1b282e;
   font-family: 'Nunito', cursive;
-  font-style: cursive;
   // display: flex;
   max-width: 640px;
   max-height: 640px;
