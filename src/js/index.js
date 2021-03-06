@@ -4,12 +4,22 @@ console.log('Did you try? 🙇‍♂️')
 
 let selectedPair = [];
 
+function compareObjects() {
+
+} 
+
 function clickedClass(e) {
     const targetClass = e.currentTarget.className;
     selectedPair.push(targetClass);
     console.log(targetClass);
+    console.log(selectedPair); 
+    console.log(selectedPair.length);
+
+    if (selectedPair.length === 2) { 
+    selectedPair[0] === selectedPair[1];
+    alert('good job, you have a match');
+    } 
 }
-console.log(selectedPair); 
 
 const classCheck = document.querySelectorAll('.grid__element');
 
@@ -17,15 +27,13 @@ for (const elementsClass of classCheck) {
     elementsClass.addEventListener('click', clickedClass); 
 }
 
- 
+
 
 
 // const testDiv = document.querySelector('.test-div');
 // testDiv.addEventListener('click', () => {
 //     testDiv.innerHTML = targetClass;
 // })
-
-
 
 const gridElement = document.querySelectorAll('.grid__element');
 
