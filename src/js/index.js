@@ -4,18 +4,16 @@ console.log('Did you try? 🙇‍♂️')
 
 let selectedPair = [];
 
-function compareObjects() {
-
-} 
-
 function clickedClass(e) {
     const targetClass = e.currentTarget.className;
     selectedPair.push(targetClass);
     console.log(targetClass);
     console.log(selectedPair); 
     console.log(selectedPair.length);
+   
 
     if (selectedPair.length === 2) { 
+
     selectedPair[0] === selectedPair[1];
     alert('good job, you have a match');
     } 
