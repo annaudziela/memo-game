@@ -12,10 +12,16 @@ function clickedClass(e) {
     console.log(selectedPair.length);
    
 
-    if (selectedPair.length === 2) { 
-
-    selectedPair[0] === selectedPair[1];
+    if (selectedPair.length === 2) {  
+    let myResult = selectedPair[0] == selectedPair[1];
+    selectedPair.splice(0,2);
+    console.log(myResult); 
+    if (myResult == true) {
     alert('good job, you have a match');
+    
+    } else {
+        alert('try again');
+    }
     } 
 }
 
@@ -33,13 +39,13 @@ for (const elementsClass of classCheck) {
 //     testDiv.innerHTML = targetClass;
 // })
 
-const gridElement = document.querySelectorAll('.grid__element');
+// const gridElement = document.querySelectorAll('.grid__element');
 
-for (const elements of gridElement) {
-    elements.addEventListener('click', () => {
-        elements.innerHTML = 'tile changed';
-    })
-}
+// for (const elements of gridElement) {
+//     elements.addEventListener('click', () => {
+//         elements.innerHTML = 'tile changed';
+//     })
+// }
 
 const b = gridElement[6];
 console.log(`${b}`);
