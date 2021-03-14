@@ -13,14 +13,15 @@ function clickedClass(e) {
    
 
     if (selectedPair.length === 2) {  
+
     let myResult = selectedPair[0] == selectedPair[1];
-    selectedPair.splice(0,2);
-    console.log(myResult); 
+    selectedPair.splice(0,2); 
+
     if (myResult == true) {
     alert('good job, you have a match');
-    
+
     } else {
-        alert('try again');
+        alert('it is not a pair, try again');
     }
     } 
 }

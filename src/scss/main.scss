@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   margin: auto;
   display: flex;
+  justify-content: center;
   
 &__element {
   color: tan;
@@ -37,15 +38,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  
 }
 &__back {
   box-sizing: border-box;
   max-width: 100px;
-  visibility: hidden;
+  max-height: 120px;
+  background-image: url("/src/assets/img/back.jpg");
+  border-radius: 4px;
+  background-size: cover;
+  margin: 8px;
+  &:hover {
+    opacity: 0.4; 
+    transform: scale(1.1);
+  }
+ 
+  
+
 }
 &__front {
   box-sizing: border-box;
   max-width: 100px;
+  // display: none;
 }
 &__list {
 padding: 0;
