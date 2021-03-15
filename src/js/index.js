@@ -10,7 +10,6 @@ function clickedClass(e) {
     console.log(targetClass);
     console.log(selectedPair); 
     console.log(selectedPair.length);
-   
 
     if (selectedPair.length === 2) {  
 
@@ -28,10 +27,27 @@ function clickedClass(e) {
 
 const classCheck = document.querySelectorAll('.grid__element');
 
+
 for (const elementsClass of classCheck) {
-    elementsClass.addEventListener('click', clickedClass); 
+    elementsClass.addEventListener('click', clickedClass);
 }
 
+for (const elementsClass of classCheck) {
+    elementsClass.addEventListener('click', () => {
+
+        let visibility = false;
+
+        if (visibility) {
+        document.documentElement.style.setProperty('--display-one', 'none');
+        document.documentElement.style.setProperty('--display-two', 'display'); 
+        visibility = false;
+        } else {
+        document.documentElement.style.setProperty('--display-one', 'display');
+        document.documentElement.style.setProperty('--display-two', 'none'); 
+        visibility = true;
+        }
+    })
+}
 
 
 

@@ -6,17 +6,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
-// * {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --display-one: none;
+  --display-two: display;
+}
+
 
 body {
+
   background: #f0efeb;
   color: #1b282e;
   font-family: 'Nunito', cursive;
-  // display: flex;
   max-width: 640px;
   max-height: 640px;
   align-items: center;
@@ -42,25 +48,26 @@ body {
   
 }
 &__back {
+  display: var(--display-two);
   box-sizing: border-box;
   max-width: 100px;
   max-height: 120px;
-  background-image: url("/src/assets/img/back.jpg");
   border-radius: 4px;
-  background-size: cover;
   margin: 8px;
   &:hover {
     opacity: 0.4; 
     transform: scale(1.1);
   }
  
-  
 
 }
 &__front {
+  display: var(--display-one);
   box-sizing: border-box;
   max-width: 100px;
-  // display: none;
+  max-height: 120px;
+  border-radius: 4px;
+  margin: 8px;
 }
 &__list {
 padding: 0;
