@@ -14,7 +14,7 @@
 
 :root {
   --display-one: none;
-  --display-two: display;
+  --display-two: block; 
 }
 
 
@@ -48,7 +48,7 @@ body {
   
 }
 &__back {
-  display: var(--display-two);
+  display: block;
   box-sizing: border-box;
   max-width: 100px;
   max-height: 120px;
@@ -59,10 +59,10 @@ body {
     transform: scale(1.1);
   }
  
-
 }
+
 &__front {
-  display: var(--display-one);
+  display: none;
   box-sizing: border-box;
   max-width: 100px;
   max-height: 120px;
@@ -81,6 +81,15 @@ grid-template-areas:
   ". . . ."
   ". . . .";
   list-style: none;
+}
+}
+
+.opened-card {
+.grid__front {
+  display: block;
+}
+.grid__back {
+  display: none;
 }
 }
 

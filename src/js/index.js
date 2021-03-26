@@ -4,25 +4,40 @@ console.log('Did you try? 🙇‍♂️')
 
 let selectedPair = [];
 
+
+
 function clickedClass(e) {
-    const targetClass = e.currentTarget.className;
-    selectedPair.push(targetClass);
-    console.log(targetClass);
-    console.log(selectedPair); 
-    console.log(selectedPair.length);
+    let currentCard = e.currentTarget;
 
-    if (selectedPair.length === 2) {  
+    selectedPair.push(currentCard);
 
-    let myResult = selectedPair[0] == selectedPair[1];
-    selectedPair.splice(0,2); 
+    currentCard.classList.add('opened-card');
 
-    if (myResult == true) {
-    alert('good job, you have a match');
 
-    } else {
-        alert('it is not a pair, try again');
-    }
+    if (selectedPair.length === 2) {
+
+        // let myResult = selectedPair[0] == selectedPair[1];
+        let myResult = selectedPair[0].className == selectedPair[1].className;
+    
+
+        if (myResult == true) {
+            // alert('good job, you have a match');
+            selectedPair.splice(0, 2);
+
+        } else {
+            // alert('it is not a pair, try again');
+            console.log(selectedPair);
+
+// opóźnić pętlę for i osobno wywołać czyszczenie tablicy
+            
+            for (const openedElement of selectedPair) {
+                setTimeout(() => {
+               openedElement.classList.remove('opened-card'); 
+        }, 800);
     } 
+            selectedPair.splice(0, 2); 
+        }
+    }
 }
 
 const classCheck = document.querySelectorAll('.grid__element');
@@ -38,13 +53,13 @@ for (const elementsClass of classCheck) {
         let visibility = false;
 
         if (visibility) {
-        document.documentElement.style.setProperty('--display-one', 'none');
-        document.documentElement.style.setProperty('--display-two', 'display'); 
-        visibility = false;
+            document.documentElement.style.setProperty('--display-one', 'none');
+            document.documentElement.style.setProperty('--display-two', 'block');
+            visibility = false;
         } else {
-        document.documentElement.style.setProperty('--display-one', 'display');
-        document.documentElement.style.setProperty('--display-two', 'none'); 
-        visibility = true;
+            document.documentElement.style.setProperty('--display-one', 'block');
+            document.documentElement.style.setProperty('--display-two', 'none');
+            visibility = true;
         }
     })
 }
@@ -73,9 +88,9 @@ const newArray = Array.from(gridElement);
 
 const shuffleButton = document.querySelector('.shuffle');
 shuffleButton.addEventListener('click', () => {
-    newArray.sort(() => Math.random() -0.5); 
+    newArray.sort(() => Math.random() - 0.5);
 })
 
-const shuffle = newArray.sort(() => Math.random() -0.5);
+const shuffle = newArray.sort(() => Math.random() - 0.5);
 document.onload = shuffle;
 console.log(shuffle);
