@@ -21,29 +21,28 @@ shuffleButton.addEventListener('click', () => {
 // tu moznaby dac funkcje, która bylaby w funkcji clickedClass
 
 function clickedClass(e) {
-    let collectCards = e.currentTarget;
-
+    
     let currentCard = e.currentTarget;
 
     selectedPair.push(currentCard);
-    gameOver.push(collectCards);
+    
     console.log(gameOver);
 
     currentCard.classList.add('opened-card');
 
-    // if (gameOver.length === 12) {
-    //     alert('Congrats, you won the game!');
-    // }
-    // if checl final 
+
 
     if (selectedPair.length === 2) {
 
-        // let myResult = selectedPair[0] == selectedPair[1];
+       
         let myResult = selectedPair[0].className == selectedPair[1].className;
     
 
         if (myResult == true) {
-            // alert('good job, you have a match');
+            gameOver.push(selectedPair[0], selectedPair[1]);
+            if (gameOver.length === 16) {
+                alert('Congrats, you won the game!');
+            };
             selectedPair.splice(0, 2);
 
         } else {

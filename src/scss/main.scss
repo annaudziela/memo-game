@@ -85,6 +85,7 @@ grid-template-areas:
 }
 
 .opened-card {
+  pointer-events: none;
 .grid__front {
   display: block;
 }
