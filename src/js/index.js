@@ -3,25 +3,38 @@ import '../scss/main.scss';
 console.log('Did you try? 🙇‍♂️')
 
 let selectedPair = [];
+let gameOver = [];
 
 let elementsToShuffle = document.querySelector('.grid__list');
 let classesToShuffle = Array.from(elementsToShuffle.children);
 
-console.log(classesToShuffle);
+
 
 const shuffleButton = document.querySelector('.shuffle');
 shuffleButton.addEventListener('click', () => {
-    console.log(classesToShuffle.sort(() => Math.random() - 0.5));
-})
+    classesToShuffle.sort(() => Math.random() - 0.5);
+    for (let element of classesToShuffle) {
+        elementsToShuffle.appendChild(element);
+    }
+});
 
+// tu moznaby dac funkcje, która bylaby w funkcji clickedClass
 
 function clickedClass(e) {
+    let collectCards = e.currentTarget;
+
     let currentCard = e.currentTarget;
 
     selectedPair.push(currentCard);
+    gameOver.push(collectCards);
+    console.log(gameOver);
 
     currentCard.classList.add('opened-card');
 
+    // if (gameOver.length === 12) {
+    //     alert('Congrats, you won the game!');
+    // }
+    // if checl final 
 
     if (selectedPair.length === 2) {
 
