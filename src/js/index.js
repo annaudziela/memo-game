@@ -13,6 +13,7 @@ let classesToShuffle = Array.from(elementsToShuffle.children);
 const shuffleButton = document.querySelector('.shuffle-button');
 shuffleButton.addEventListener('click', () => {
     classesToShuffle.sort(() => Math.random() - 0.5);
+    
     for (let element of classesToShuffle) {
         elementsToShuffle.appendChild(element);
     }

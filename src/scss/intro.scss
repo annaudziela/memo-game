@@ -40,12 +40,14 @@ text-align: center;
     cursor: pointer;
     margin: 20px;
     padding: 10px;
+    background-color: #dedede8e;
     color: red;
     font-family: 'Dancing Script', cursive;
     border-radius: 10px;
     border: none red 1px;
     &:hover {
-        background-color: #dedede8e;
+        background-color: #b6b6b68e;
+       
     }
 }
 
